@@ -1,0 +1,13 @@
+server {
+  listen 80;
+  server_name 194.67.113.27;
+
+  location /static/ {
+    root /home/aleks/vps_server/stocks_products;
+  }
+  
+  location / {
+    include proxy_params;
+    proxy_pass http://unix:/home/aleks/vps_server/stocks_products/stocks_progects/project.sock;
+  }
+}
