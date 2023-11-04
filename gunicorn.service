@@ -4,7 +4,7 @@ Description=Gunicorn service daemon
 [Service]
 User=aleks
 Group=www-data
-WorkingDirectory=/home/aleks/vps_server/stocks_prodicts
+WorkingDirectory=/home/aleks/vps_server
 ExecStart=/home/aleks/vps_server/stocks_products/.env/bin/gunicorn --workers 3 -bind unix:/home/aleks/vps_server/stocks_products/project.sock stocks_progects.wsgi:application
 
 [Install]
